@@ -7,8 +7,8 @@ cache:
 install: "pip install Lektor"
 script: "lektor build"
 deploy:
-  fqdn: 'https://jeff-tian.github.io/jeff-tian'
+  fqdn: 'https://jeff-tian.github.io'
   provider: script
-  script: "lektor deploy ghpages"
+  script: "lektor deploy ghpages -b master"
   on:
-    branch: master
+    branch: src
