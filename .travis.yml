@@ -9,6 +9,6 @@ script: "lektor build"
 deploy:
   fqdn: 'https://jeff-tian.github.io'
   provider: script
-  script: "lektor deploy ghpages -b master"
+  script: "lektor deploy ghpages"
   on:
     branch: src
