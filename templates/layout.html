@@ -1,22 +1,24 @@
 <!doctype html>
 <meta charset="utf-8">
 <link rel="stylesheet" href="{{ '/static/style.css'|url }}">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
 <title>{% block title %}Welcome{% endblock %} — jeff-tian</title>
+
 <body>
   <header>
     <h1>jeff-tian</h1>
     <nav>
       <ul class="nav navbar-nav">
-        <li{% if this._path == '/' %} class="active"{% endif
+        <li{% if this._path == '/' %} class="active" {% endif
           %}><a href="{{ '/'|url }}">Welcome</a></li>
-        {% for href, title in [
+          {% for href, title in [
           ['/blog', 'Blog'],
           ['/projects', 'Projects'],
           ['/about', 'About']
         ] %}
-          <li{% if this.is_child_of(href) %} class="active"{% endif
+          <li{% if this.is_child_of(href) %} class="active" {% endif
             %}><a href="{{ href|url }}">{{ title }}</a></li>
-        {% endfor %}
+            {% endfor %}
       </ul>
     </nav>
   </header>
